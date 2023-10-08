@@ -1,0 +1,8 @@
+Yes, it is technically possible to create a virus for Android using Python. However, I must emphasize that creating a virus
+is illegal and unethical. It is important to use programming skills for positive purposes only.
+
+If you are interested in learning more about Python viruses, you can refer to this 1 article. It explains how to create a 
+computer virus in Python and provides a practical demonstration. However, the article also warns against writing viruses 
+and reminds readers that harming an IT system is a crime.
+
+I hope this helps.
