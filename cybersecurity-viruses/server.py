@@ -18,9 +18,16 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         # conn.send(b"Hello World")
         while True:
             command = input("Enter command: ")
-            command = command.encode()
-            conn.send(command)
-            print("[+] Command sent")
-            output = conn.recv(1024)
-            output = output.decode()
-            print(f"Output: {output}")
+            if command:
+                if command == "exito":
+                    print("Thanks for using this tool.")
+                    break
+                command = command.encode()
+                conn.send(command)
+                print("[+] Command sent")
+                output = conn.recv(999999999)
+                output = output.decode()
+                print(f"Output: {output}")
+
+            else:
+                continue
