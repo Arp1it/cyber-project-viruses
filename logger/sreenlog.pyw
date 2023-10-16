@@ -1,4 +1,9 @@
-import pyautogui, time
+import pyautogui, time, os
+
+try:
+    os.mkdir('imglog/')
+except:
+    pass
 
 i = 0
 while True:
