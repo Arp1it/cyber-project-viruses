@@ -1,0 +1,5 @@
+msf
+msfad
+msfadmin
+root
+password123
