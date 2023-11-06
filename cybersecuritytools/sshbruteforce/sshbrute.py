@@ -32,7 +32,7 @@ with open(input_file, "r") as file:
         password = line.strip()
         try:
             response = ssh_connect(password)
-            print(response)
+            # print(response)
 
             if response == 0:
                 print(f"[+] Found Password {password}, For Account: {username}")
